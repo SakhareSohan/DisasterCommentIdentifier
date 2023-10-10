@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Disaster Comment Identifier</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        #text {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        #submit-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        #result {
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Natural Disaster Comment Identifier</h1>
+        <form method="POST" action="/">
+            <label for="text">Enter Text:</label>
+            <input type="text" id="text" name="text" rows="4" cols="50" placeholder="Enter your comment here..."></input>
+            <br>
+        </form>
+    
+    <div>
+        <h2>Comment:</h2>
+        <p>
+            {{ text }}
+        </p>
+        <h2>Result:</h2>
+        <p>
+            {{ is_disaster }}
+            {{ matched_disasters }}
+        </p>
+    </div>
+</div>
+</body>
+
+</html>
